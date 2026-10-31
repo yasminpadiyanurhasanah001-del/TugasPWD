@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Riwayat Hidup</title>
+
+    <style>
+        /* CSS DASAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eaf2f8;
+            padding: 25px;
+            color: #263b50;
+        }
+
+        /* HALAMAN CV */
+        .cv {
+            max-width: 800px;
+            min-height: 1050px;
+            margin: auto;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 3px 12px #0002;
+        }
+
+        /* JUDUL DAN FOTO */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #a9cce5;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 1.2;
+            color: #254967;
+        }
+
+        .foto {
+            width: 130px;
+            height: 165px;
+            object-fit: cover;
+            border: 5px solid #d9eaf6;
+        }
+
+        /* JUDUL BAGIAN */
+        h2 {
+            font-size: 21px;
+            color: #315c7d;
+            margin-bottom: 15px;
+        }
+
+        .bagian {
+            margin-bottom: 30px;
+        }
+
+        /* DATA DIRI */
+        .baris {
+            display: grid;
+            grid-template-columns: 180px 15px 1fr;
+            gap: 5px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* PENDIDIKAN DAN PENGALAMAN */
+        .riwayat {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .tahun {
+            color: #6289a8;
+            font-weight: bold;
+        }
+
+        /* KEMAMPUAN */
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        li::before {
+            content: "✓ ";
+            color: #5b91b9;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* EFEK HOVER */
+        .baris:hover,
+        .riwayat:hover,
+        li:hover {
+            color: #6398bd;
+            transition: 0.3s;
+        }
+
+        /* BAGIAN BAWAH */
+        .footer {
+            margin-top: 45px;
+            padding-top: 12px;
+            border-top: 2px solid #a9cce5;
+            text-align: right;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #6289a8;
+        }
+
+        /* TAMPILAN HP */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .cv {
+                padding: 22px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .foto {
+                width: 95px;
+                height: 125px;
+            }
+
+            .baris {
+                grid-template-columns: 115px 10px 1fr;
+                font-size: 12px;
+                gap: 2px;
+            }
+
+            .riwayat {
+                grid-template-columns: 105px 1fr;
+                font-size: 12px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        /* CETAK PDF */
+        @media print {
+            @page {
+                size: A4;
+                margin: 12mm;
+            }
+
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .cv {
+                max-width: none;
+                min-height: auto;
+                padding: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="cv">
+
+    <!-- JUDUL DAN FOTO -->
+    <div class="header">
+        <h1>DAFTAR<br>RIWAYAT<br>HIDUP</h1>
+
+        <img src="foto.jpg" alt="Foto Profil" class="foto">
+    </div>
+
+    <!-- DATA DIRI -->
+    <div class="bagian">
+        <h2>DATA DIRI</h2>
+
+        <div class="baris">
+            <div>Nama</div>
+            <div>:</div>
+            <div><b>Yasmin Padiya Nurhasanahh</b></b></div>
+        </div>
+
+        <div class="baris">
+            <div>Tempat, Tanggal Lahir</div>
+            <div>:</div>
+            <div>Gedong, 24 Oktober 2026</div>
+        </div>
+
+        <div class="baris">
+            <div>Jenis Kelamin</div>
+            <div>:</div>
+            <div>Perempuan</div>
+        </div>
+
+        <div class="baris">
+            <div>Status</div>
+            <div>:</div>
+            <div>Mahasiswa</div>
+        </div>
+
+        <div class="baris">
+            <div>Alamat</div>
+            <div>:</div>
+            <div>Pasar Rebo</div>
+        </div>
+
+        <div class="baris">
+            <div>Telepon</div>
+            <div>:</div>
+            <div>0810987654321</div>
+        </div>
+
+        <div class="baris">
+            <div>Email</div>
+            <div>:</div>
+            <div>padianurhasanah@email.com</div>
+        </div>
+    </div>
+
+    <!-- PENDIDIKAN -->
+    <div class="bagian">
+        <h2>PENDIDIKAN</h2>
+
+        <div class="riwayat">
+            <div class="tahun">2021 – 2024</div>
+            <div>Lulus SMP</div>
+        </div>
+
+        <div class="riwayat">
+            <div class="tahun">2024 – Sekarang</div>
+            <div>Lulus SMK</div>
+        </div>
+    </div>
+
+    <!-- PENGALAMAN -->
+    <div class="bagian">
+        <h2>PENGALAMAN</h2>
+
+        <div class="riwayat">
+            <div class="tahun">2024</div>
+            <div>PT. Pertamina</div>
+        </div>
+    </div>
+
+    <!-- KEMAMPUAN -->
+    <div class="bagian">
+        <h2>KEMAMPUAN</h2>
+
+        <ul>
+            <li>Menguasai banyak hal</li>
+            <li>Menguasai banyak cara</li>
+            <li>Komunikasi dan kerja sama tim</li>
+        </ul>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        DAFTAR RIWAYAT HIDUP
+    </div>
+
+</div>
+
+</body>
+</html>
